@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GDLuaWrapper.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +16,7 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [[GDLuaWrapper getInstance] initLua];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
